@@ -1,0 +1,13 @@
+<p><a href="{% url 'movies' %}">Back to ALL Movies</a></p> <p><a href="{% url 'genres' %}">Back to Genres</a></p>
+<img src="{{ movie.poster.url }}" height="300" width="200"><br>
+<p>Название:</p>
+<p><font size="3" color="red" face="Arial">{{ movie.title }}</font></p>
+<p>Год:</p>
+<p>{{ movie.year }}</p>
+<p>Жанр:</p>
+<p>{% for genre in genres %}
+{{ genre.title }}
+       {% endfor %}</p>
+<p><video width="1080" height="680" controls>
+       <source src="{{ movie.movie.url}}" type="video/mp4">
+</video></p>
