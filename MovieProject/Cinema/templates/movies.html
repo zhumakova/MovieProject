@@ -1,0 +1,9 @@
+<p><font size="5" color="orange" face="Arial">Movies</font></p>
+<p><a href="{% url 'genres' %}">All Genres</a></p>
+{% for movie in movies %}
+<img src="{{ movie.poster.url }}" height="300" width="200">
+<a href="{% url 'movie_detail' movie.id %}">{{ movie.title }}</a>
+{{ movie.year }}
+
+{% endfor %}
+
