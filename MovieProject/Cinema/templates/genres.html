@@ -1,0 +1,8 @@
+<p><font size="5" color="orange" face="Arial">Genres</font></p>
+{% for genre in genres %}
+<a href="{% url 'genre_movies' genre.id%} ">{{ genre.title }}</a><hr>
+{% endfor %}
+
+
+
+
