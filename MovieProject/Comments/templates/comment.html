@@ -1,0 +1,12 @@
+<form method="POST" action="">
+    <h2>Напишите отзыв!</h2>
+    {% csrf_token %}
+    {{form}}
+    <input type="submit">
+    {% for c in comment %}
+        <p>Пользователь:{{c.user}}</p>
+        <p>Текст комментария:{{c.text}}</p>
+        <p>Дата создания:{{c.date_created}}</p><br>
+        <hr>
+    {% endfor %}
+</form>
